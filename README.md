@@ -1,36 +1,134 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🤖 Persona AI
 
-## Getting Started
+An AI-powered multi-persona chatbot built with **Next.js, TypeScript, React, and Google Gemini**. Interact with different AI personas and experience real-time streaming conversations through a clean and responsive chat interface.
 
-First, run the development server:
+## ✨ Features
+
+- **Multiple AI Personas:** Switch between different AI personalities, including Hitesh and Piyush.
+- **Real-Time Streaming:** Receive AI responses progressively instead of waiting for the complete response.
+- **Persona-Based Prompting:** Dynamically generate system instructions based on the selected persona.
+- **Retry Mechanism:** Automatically retries eligible temporary API failures.
+- **Conversation Interface:** Interactive chat interface with user and AI messages.
+- **Persistent Persona Selection:** Remembers the selected persona using browser local storage.
+- **Error Handling:** Handles API failures and empty AI responses gracefully.
+
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|---|---|
+| Frontend | Next.js, React, TypeScript |
+| Styling | Tailwind CSS, shadcn/ui |
+| AI Integration | Google Gemini API |
+| Backend | Next.js API Routes |
+| State Management | React Hooks |
+| Development Tools | Git, GitHub, npm |
+
+## 📸 Screenshots
+
+<!-- Add your application screenshots here -->
+
+### Chat Interface
+
+![Persona AI Chat Interface](./public/screenshots/chat-interface.png)
+
+### Persona Selection
+
+![Persona Selection](./public/screenshots/persona-selection.png)
+
+## 🏗️ Project Architecture
+
+```text
+persona_ai/
+│
+├── app/
+│   ├── api/chat/
+│   │   └── route.ts
+│   ├── page.tsx
+│   └── globals.css
+│
+├── components/
+│   ├── PersonaSelector.tsx
+│   ├── ChatBox.tsx
+│   └── ChatInput.tsx
+│
+├── hooks/
+│   └── useChat.ts
+│
+├── lib/
+│   ├── ai.ts
+│   ├── promptBuilder.ts
+│   └── types.ts
+│
+├── public/
+└── README.md
+```
+
+## ⚙️ Getting Started
+
+Follow these instructions to run the project locally.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/krishnaydv3214-coder/persona-ai.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd persona-ai
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Configure environment variables
+
+Create a `.env.local` file in the root directory.
+
+Add your Gemini API key:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+Get an API key from [Google AI Studio](https://aistudio.google.com/apikey).
+
+### 5. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔐 Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable | Description |
+|---|---|
+| `GEMINI_API_KEY` | API key used to access Google Gemini |
 
-## Learn More
+**Important:** Never commit your `.env.local` file or expose your API key publicly.
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Future Improvements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Add user authentication.
+- Store conversation history in a database.
+- Allow users to create custom AI personas.
+- Add support for multiple conversations.
+- Deploy the application with a production-ready configuration.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 👨‍💻 Author
 
-## Deploy on Vercel
+**Krishna Kumar**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+B.Tech Computer Science and Engineering
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[GitHub](https://github.com/krishnaydv3214-coder)
+
+---
+
+⭐ If you find this project interesting, consider giving it a star!
